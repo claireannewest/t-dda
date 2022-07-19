@@ -1,0 +1,24 @@
+# Jupyter notebooks
+.ipynb_checkpoints
+
+# emacs back-up files
+.#*
+.*~
+
+# Mac OS
+.DS_Store
+
+# Python
+__pycache__
+
+# Output files
+*eV
+lattice_greenfunction/Green_grid300.txt
+
+# In progress work
+troubleshoot_lattice_greens
+larger_greens
+
+# Executables
+Lattice_Diffusion
+*.o
