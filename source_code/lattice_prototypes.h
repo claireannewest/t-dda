@@ -8,4 +8,5 @@ extern void sgemv_(char *TRANS, int *M, int *N, float *ALPHA, float *A, int *LDA
 extern void sgemm_(char *TRANSA, char *TRANSB, int *M, int *N, int *K, float *ALPHA, float *A, int *LDA, float *B, int *LDB, float *BETA, float *C, int *LDC);
 
 //LAPACK linear system solver
-extern void sgesv_(size_t *N, int *NRHS, float *A, size_t *LDA, int *IPIV, float *B, size_t *LDB, int *INFO);
+extern void dgesv_(int *n, int *nrhs, double *a, int *lda,
+                   int *ipiv, double *b, int *ldb, int *info);

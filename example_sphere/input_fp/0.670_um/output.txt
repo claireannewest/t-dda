@@ -1,0 +1,547 @@
+>DDSCAT using parameter file #  1 =
+ddscat.par
+>DDSCAT NUMPROC=   1                                                          
+>DDSCAT --- DDSCAT 7.3.2 [18.08.29]   
+>DDSCAT     VERSNUM=   732
+>DDSCAT     Double-precision version                                          
+>REAPAR  ========== Parameter file for v7.3 ===================               
+>  **** Preliminaries ****                                               
+>REAPAR NOTORQ - do not compute torques                                       
+>REAPAR PBCGS2 - CCG Method                                                   
+>REAPAR GPFAFT - using GPFA package from Clive Temperton                      
+>REAPAR GKDLDR - Gutkowicz-Krusin & Draine (2004) LDR for alpha
+>REAPAR NOTBIN - Unformatted binary dump option                               
+>REAPAR **** Initial Memory Allocation ****                                   
+>REAPAR allow MXNX,MXNY,MXNZ=    60    60    60 for target generation         
+>REAPAR **** Target Geometry and Composition ****                             
+>REAPAR FROM_FILE - Shape definition                                          
+>REAPAR  NCOMP=   1                                                           
+>REAPAR comp  1 : ../auJC.tab                                                 
+>REAPAR **** Additional Nearfield calculation? ****                           
+>REAPAR  2 = NRFLD : calculate nearfield E and B in specified volume          
+>REAPAR  0.000 0.000 0.000 0.000 0.000 0.000                                  
+>REAPAR  fractional extension in -x,+x,-y,+y,-z,+z directions                 
+>REAPAR **** Error Tolerance ****                                             
+>REAPAR  1.000E-05 = TOL = max. acceptable normalized residual |Ax-E|/|E|     
+>REAPAR **** Maximum number of iterations ****                                
+>REAPAR       2370 = MXITER                                                   
+>  **** Integration cutoff parameter for PBC calculations ****           
+>REAPAR [GAMMA is not used in present (non-PBC) calculation]                  
+>  **** Angular resolution for calculation of <cos>, etc. ****           
+>REAPAR  0.5000 = ETASCA (parameter controlling number of scattering angles   
+>  **** Vacuum wavelengths (micron) ****                                 
+>REAPAR   1 wavelengths from  0.6700 to  0.6700                               
+>DIVIDE  Only one element initialized 
+>  **** Refractive index of ambient medium                               
+>REAPAR  1.0000 = NAMBIENT = refractive index of ambient medium               
+>  **** Effective Radii (micron) ****                                    
+>REAPAR   1 eff. radii from  0.0100 to  0.0100                                
+>DIVIDE  Only one element initialized 
+>  **** Define Incident Polarizations ****                               
+>REAPAR IORTH= 1                                                              
+>REAPAR **** Specify which output files to write ****                         
+>REAPAR IWRKSC= 0                                                             
+>REAPAR set IWRPOL=1 because NRFLD=1                                          
+>  **** Specify Target Rotations ****                                    
+>  **** Specify first IWAV, IRAD, IORI (normally 0 0 0) ****             
+>REAPAR Calculate only for single polarization 
+>REAPAR    0.00   0.00 Range of BETA values ; NBETA =   1                     
+>REAPAR    0.00   0.00 Range of THETA values; NTHETA=   1                     
+>REAPAR    0.00   0.00 Range of PHI values ;   NPHI =   1                     
+>  **** Select Elements of S_ij Matrix to Print ****                     
+>REAPAR CMDFRM=LFRAME : scattering directions given in Lab Frame              
+>REAPAR **** Specify Scattered Directions ****                                
+>DDSCAT Allocate memory for first call to TARGET...                           
+>DDSCAT allocating     1.24 MB for IXYZ0;  total=    41.19 MB                 
+>DDSCAT allocating     1.24 MB for ICOMP;  total=    42.43 MB                 
+>DDSCAT allocating     0.41 MB for IOCC;   total=    42.84 MB                 
+>DDSCAT allocating     1.24 MB for ISCR1;  total=    44.08 MB                 
+>DDSCAT allocating     1.65 MB for BETADF; total=    45.73 MB                 
+>DDSCAT allocating     1.65 MB for PHIDF;  total=    47.37 MB                 
+>DDSCAT allocating     1.65 MB for THETADF;total=    49.02 MB                 
+>DDSCAT allocating     1.65 MB for SCRRS2; total=    50.67 MB                 
+>REASHP about to open shape file=
+>REASHP shape.dat                                                                       
+>REASHP completed reading target file=
+>REASHP shape.dat                                                                       
+>REASHP  requires  1 different refractive index files                         
+>REASHP  requires  1 different refractive index files                         
+>TARGET: Sphere of radius 10 nm and dipole spacing 1 nm                    
+           4169 = NAT0 = number of dipoles in target
+>TARGET  NCOMP_NEED=   1 compositions in target                               
+>DDSCAT returned from TARGET:                                                 
+>DDSCAT : dimensions of physical target                                       
+>DDSCAT    -21    -1 = min, max values of JX                                  
+>DDSCAT    -10    10 = min, max values of JY                                  
+>DDSCAT    -10    10 = min, max values of JZ                                  
+>DDSCAT    0.00000   0.00000   0.00000 = X0(1-3)                              
+>DDSCAT  --- physical extent of target volume (occupied sites) ---            
+>DDSCAT    -21.50000    -0.50000 = min, max values of x/d                     
+>DDSCAT    -10.50000    10.50000 = min, max values of y/d                     
+>DDSCAT    -10.50000    10.50000 = min, max values of z/d                     
+>EXTEND target extent in x,y,z directions =   21,   21,   21 (in Target Frame)
+>DDSCAT returned from EXTEND:                                                 
+>DDSCAT      1    21 = min, max values of JX                                  
+>DDSCAT      1    21 = min, max values of JY                                  
+>DDSCAT      1    21 = min, max values of JZ                                  
+>DDSCAT  ------- physical extent of target volume -------                     
+>DDSCAT    -21.50000    -0.50000 = min, max values of x/d                     
+>DDSCAT    -10.50000    10.50000 = min, max values of y/d                     
+>DDSCAT    -10.50000    10.50000 = min, max values of z/d                     
+>DDSCAT Allocate memory required for this problem...                          
+>DDSCAT allocating     0.08 MB for ISCR1;  total=    40.04 MB                 
+>DDSCAT allocating     0.11 MB for SCRRS2; total=    40.14 MB                 
+>DDSCAT allocating     0.02 MB for IXYZ0;  total=    40.17 MB                 
+>DDSCAT allocating     0.08 MB for ICOMP;  total=    40.25 MB                 
+>DDSCAT allocating     0.03 MB for IOCC;   total=    40.27 MB                 
+>DDSCAT allocating     0.03 MB for BETADF; total=    40.30 MB                 
+>DDSCAT allocating     0.03 MB for PHIDF;  total=    40.34 MB                 
+>DDSCAT allocating     0.03 MB for THETADF;total=    40.37 MB                 
+>DDSCAT allocating     0.63 MB for CXADIA; total=    41.00 MB                 
+>DDSCAT allocating    10.12 MB for CXZC;   total=    51.13 MB                 
+>DDSCAT allocating     5.06 MB for CXZW;   total=    56.19 MB                 
+>DDSCAT allocating     0.63 MB for CXAOFF; total=    56.82 MB                 
+>DDSCAT allocating     0.63 MB for CXALOF; total=    57.45 MB                 
+>DDSCAT allocating     0.63 MB for CXALPH; total=    58.09 MB                 
+>DDSCAT allocating     0.63 MB for CXE_TF; total=    58.72 MB                 
+>DDSCAT allocating     6.33 MB for CXSC  ; total=    65.05 MB                 
+>DDSCAT allocating     0.63 MB for CXSCR1; total=    65.68 MB                 
+>DDSCAT allocating     0.63 MB for CXXI;   total=    66.31 MB                 
+>DDSCAT allocating     0.32 MB for SCRRS1; total=    66.63 MB                 
+>DDSCAT                 Total memory allocation =    66.63 MB                 
+         13824 = NAT  = number of lattice sites in extended target
+         24  24  24 = x,y,z length of extended target (Targ. Frame)
+>DIELEC about to read file =                                                  
+>DIELEC ../auJC.tab                                                 
+>DIELEC Refractive index of Au from Johnson and Christy                       
+>DIELEC  completed reading file =                                             
+>DIELEC ../auJC.tab                                                 
+>DDSCAT m= (   0.13459 ,   3.79358), epsilon= ( -14.37312 ,    1.02117) :material 1 1
+>DDSCAT    0.010000 = AEFF = effective radius (physical units)
+>DDSCAT    0.100158 = d/aeff for this target
+>DDSCAT    0.670000 = WAVE = wavelength in vacuo (physical units)
+>DDSCAT    0.670000 = wavelength in ambient medium (phys. units)
+>DDSCAT    0.093779 = k_amb*aeff = 2*pi*aeff/lambda_amb
+>DDSCAT    0.009393 = k_amb*d
+>ROTATE       a_1 in TF:  1.00000000  0.00000000  0.00000000                  
+>ROTATE       a_2 in TF:  0.00000000  1.00000000  0.00000000                  
+>ROTATE       a_3 in TF:  0.00000000  0.00000000  1.00000000                  
+>ROTATE      x_LF in TF:  1.00000000  0.00000000  0.00000000                  
+>ROTATE      y_LF in TF:  0.00000000  1.00000000  0.00000000                  
+>ROTATE      z_LF in TF:  0.00000000  0.00000000  1.00000000                  
+>ROTATE n0=x_LF dot a_1=  1.00000000                                          
+>ROTATE n0=x_LF dot a_2=  0.00000000                                          
+>ROTATE n0=x_LF dot a_3=  0.00000000                                          
+>ROTATE    y_LF dot a_1=  0.00000000                                          
+>ROTATE    y_LF dot a_2=  1.00000000                                          
+>ROTATE    y_LF dot a_3=  0.00000000                                          
+>ROTATE    z_LF dot a_1=  0.00000000                                          
+>ROTATE    z_LF dot a_2=  0.00000000                                          
+>ROTATE    z_LF dot a_3=  1.00000000                                          
+>ALPHA  GKDLDR Lattice dispersion relation for |m|k_0d= 0.0357                
+>DIRECT_CALC Estimated total cputime required by DIRECT_CALC=    0.01 cpu-sec  
+>DIRECT_CALC cputime is independent of gamma                                   
+>DIRECT_CALC Actual cputime to complete DIRECT_CALC=    0.00 cpu-sec           
+>ZBCG2  IT=       1 f.err= 1.104E-01                                          
+>ZBCG2  IT=       2 f.err= 2.166E-01                                          
+>ZBCG2  IT=       3 f.err= 9.441E-02                                          
+>ZBCG2  IT=       4 f.err= 8.875E-02                                          
+>ZBCG2  IT=       5 f.err= 8.302E-02                                          
+>ZBCG2  IT=       6 f.err= 7.339E-02                                          
+>ZBCG2  IT=       7 f.err= 8.264E-02                                          
+>ZBCG2  IT=       8 f.err= 6.377E-02                                          
+>ZBCG2  IT=       9 f.err= 1.453E-01                                          
+>ZBCG2  IT=      10 f.err= 4.919E-02                                          
+>ZBCG2  IT=      11 f.err= 1.591E-01                                          
+>ZBCG2  IT=      12 f.err= 4.293E-02                                          
+>ZBCG2  IT=      13 f.err= 1.645E-01                                          
+>ZBCG2  IT=      14 f.err= 4.440E-02                                          
+>ZBCG2  IT=      15 f.err= 1.317E-01                                          
+>ZBCG2  IT=      16 f.err= 3.900E-02                                          
+>ZBCG2  IT=      17 f.err= 9.443E-02                                          
+>ZBCG2  IT=      18 f.err= 3.525E-02                                          
+>ZBCG2  IT=      19 f.err= 6.562E-02                                          
+>ZBCG2  IT=      20 f.err= 3.384E-02                                          
+>ZBCG2  IT=      21 f.err= 5.527E-02                                          
+>ZBCG2  IT=      22 f.err= 3.404E-02                                          
+>ZBCG2  IT=      23 f.err= 3.461E-02                                          
+>ZBCG2  IT=      24 f.err= 3.211E-02                                          
+>ZBCG2  IT=      25 f.err= 3.100E-02                                          
+>ZBCG2  IT=      26 f.err= 3.772E-02                                          
+>ZBCG2  IT=      27 f.err= 2.483E-02                                          
+>ZBCG2  IT=      28 f.err= 4.071E-02                                          
+>ZBCG2  IT=      29 f.err= 2.261E-02                                          
+>ZBCG2  IT=      30 f.err= 3.904E-02                                          
+>ZBCG2  IT=      31 f.err= 2.209E-02                                          
+>ZBCG2  IT=      32 f.err= 3.641E-02                                          
+>ZBCG2  IT=      33 f.err= 2.063E-02                                          
+>ZBCG2  IT=      34 f.err= 2.723E-02                                          
+>ZBCG2  IT=      35 f.err= 2.415E-02                                          
+>ZBCG2  IT=      36 f.err= 1.892E-02                                          
+>ZBCG2  IT=      37 f.err= 1.642E-02                                          
+>ZBCG2  IT=      38 f.err= 1.780E-02                                          
+>ZBCG2  IT=      39 f.err= 1.505E-02                                          
+>ZBCG2  IT=      40 f.err= 1.371E-02                                          
+>ZBCG2  IT=      41 f.err= 1.445E-02                                          
+>ZBCG2  IT=      42 f.err= 1.471E-02                                          
+>ZBCG2  IT=      43 f.err= 1.257E-02                                          
+>ZBCG2  IT=      44 f.err= 1.139E-02                                          
+>ZBCG2  IT=      45 f.err= 1.129E-02                                          
+>ZBCG2  IT=      46 f.err= 1.138E-02                                          
+>ZBCG2  IT=      47 f.err= 1.134E-02                                          
+>ZBCG2  IT=      48 f.err= 1.125E-02                                          
+>ZBCG2  IT=      49 f.err= 9.661E-03                                          
+>ZBCG2  IT=      50 f.err= 8.887E-03                                          
+>ZBCG2  IT=      51 f.err= 9.007E-03                                          
+>ZBCG2  IT=      52 f.err= 1.249E-02                                          
+>ZBCG2  IT=      53 f.err= 8.185E-03                                          
+>ZBCG2  IT=      54 f.err= 7.597E-03                                          
+>ZBCG2  IT=      55 f.err= 7.436E-03                                          
+>ZBCG2  IT=      56 f.err= 8.542E-03                                          
+>ZBCG2  IT=      57 f.err= 7.194E-03                                          
+>ZBCG2  IT=      58 f.err= 6.649E-03                                          
+>ZBCG2  IT=      59 f.err= 7.199E-03                                          
+>ZBCG2  IT=      60 f.err= 6.530E-03                                          
+>ZBCG2  IT=      61 f.err= 5.724E-03                                          
+>ZBCG2  IT=      62 f.err= 7.256E-03                                          
+>ZBCG2  IT=      63 f.err= 5.230E-03                                          
+>ZBCG2  IT=      64 f.err= 4.911E-03                                          
+>ZBCG2  IT=      65 f.err= 5.371E-03                                          
+>ZBCG2  IT=      66 f.err= 5.670E-03                                          
+>ZBCG2  IT=      67 f.err= 6.052E-03                                          
+>ZBCG2  IT=      68 f.err= 4.308E-03                                          
+>ZBCG2  IT=      69 f.err= 4.241E-03                                          
+>ZBCG2  IT=      70 f.err= 4.815E-03                                          
+>ZBCG2  IT=      71 f.err= 4.268E-03                                          
+>ZBCG2  IT=      72 f.err= 4.138E-03                                          
+>ZBCG2  IT=      73 f.err= 4.042E-03                                          
+>ZBCG2  IT=      74 f.err= 5.113E-03                                          
+>ZBCG2  IT=      75 f.err= 4.416E-03                                          
+>ZBCG2  IT=      76 f.err= 3.956E-03                                          
+>ZBCG2  IT=      77 f.err= 4.278E-03                                          
+>ZBCG2  IT=      78 f.err= 6.648E-03                                          
+>ZBCG2  IT=      79 f.err= 4.092E-03                                          
+>ZBCG2  IT=      80 f.err= 7.049E-03                                          
+>ZBCG2  IT=      81 f.err= 1.009E-02                                          
+>ZBCG2  IT=      82 f.err= 9.899E-03                                          
+>ZBCG2  IT=      83 f.err= 6.143E-03                                          
+>ZBCG2  IT=      84 f.err= 4.372E-03                                          
+>ZBCG2  IT=      85 f.err= 4.603E-03                                          
+>ZBCG2  IT=      86 f.err= 1.525E-02                                          
+>ZBCG2  IT=      87 f.err= 4.844E-03                                          
+>ZBCG2  IT=      88 f.err= 4.007E-03                                          
+>ZBCG2  IT=      89 f.err= 4.987E-03                                          
+>ZBCG2  IT=      90 f.err= 4.734E-03                                          
+>ZBCG2  IT=      91 f.err= 4.265E-03                                          
+>ZBCG2  IT=      92 f.err= 3.195E-03                                          
+>ZBCG2  IT=      93 f.err= 3.545E-03                                          
+>ZBCG2  IT=      94 f.err= 5.089E-03                                          
+>ZBCG2  IT=      95 f.err= 2.873E-03                                          
+>ZBCG2  IT=      96 f.err= 2.949E-03                                          
+>ZBCG2  IT=      97 f.err= 2.133E-03                                          
+>ZBCG2  IT=      98 f.err= 1.951E-03                                          
+>ZBCG2  IT=      99 f.err= 2.039E-03                                          
+>ZBCG2  IT=     100 f.err= 1.943E-03                                          
+>ZBCG2  IT=     101 f.err= 1.736E-03                                          
+>ZBCG2  IT=     102 f.err= 1.730E-03                                          
+>ZBCG2  IT=     103 f.err= 1.485E-03                                          
+>ZBCG2  IT=     104 f.err= 1.497E-03                                          
+>ZBCG2  IT=     105 f.err= 1.365E-03                                          
+>ZBCG2  IT=     106 f.err= 1.253E-03                                          
+>ZBCG2  IT=     107 f.err= 1.392E-03                                          
+>ZBCG2  IT=     108 f.err= 1.241E-03                                          
+>ZBCG2  IT=     109 f.err= 1.214E-03                                          
+>ZBCG2  IT=     110 f.err= 1.284E-03                                          
+>ZBCG2  IT=     111 f.err= 1.187E-03                                          
+>ZBCG2  IT=     112 f.err= 1.175E-03                                          
+>ZBCG2  IT=     113 f.err= 2.949E-03                                          
+>ZBCG2  IT=     114 f.err= 1.483E-03                                          
+>ZBCG2  IT=     115 f.err= 2.112E-03                                          
+>ZBCG2  IT=     116 f.err= 1.958E-03                                          
+>ZBCG2  IT=     117 f.err= 1.393E-03                                          
+>ZBCG2  IT=     118 f.err= 1.319E-03                                          
+>ZBCG2  IT=     119 f.err= 1.609E-03                                          
+>ZBCG2  IT=     120 f.err= 2.127E-03                                          
+>ZBCG2  IT=     121 f.err= 1.373E-03                                          
+>ZBCG2  IT=     122 f.err= 1.379E-03                                          
+>ZBCG2  IT=     123 f.err= 1.409E-03                                          
+>ZBCG2  IT=     124 f.err= 1.403E-03                                          
+>ZBCG2  IT=     125 f.err= 1.268E-03                                          
+>ZBCG2  IT=     126 f.err= 5.166E-04                                          
+>ZBCG2  IT=     127 f.err= 5.868E-04                                          
+>ZBCG2  IT=     128 f.err= 5.633E-04                                          
+>ZBCG2  IT=     129 f.err= 6.119E-04                                          
+>ZBCG2  IT=     130 f.err= 4.802E-04                                          
+>ZBCG2  IT=     131 f.err= 4.701E-04                                          
+>ZBCG2  IT=     132 f.err= 5.009E-04                                          
+>ZBCG2  IT=     133 f.err= 5.585E-04                                          
+>ZBCG2  IT=     134 f.err= 6.587E-04                                          
+>ZBCG2  IT=     135 f.err= 4.689E-04                                          
+>ZBCG2  IT=     136 f.err= 5.935E-04                                          
+>ZBCG2  IT=     137 f.err= 4.232E-04                                          
+>ZBCG2  IT=     138 f.err= 4.815E-04                                          
+>ZBCG2  IT=     139 f.err= 6.747E-04                                          
+>ZBCG2  IT=     140 f.err= 4.826E-04                                          
+>ZBCG2  IT=     141 f.err= 4.425E-04                                          
+>ZBCG2  IT=     142 f.err= 4.513E-04                                          
+>ZBCG2  IT=     143 f.err= 3.070E-03                                          
+>ZBCG2  IT=     144 f.err= 5.852E-04                                          
+>ZBCG2  IT=     145 f.err= 4.506E-04                                          
+>ZBCG2  IT=     146 f.err= 3.013E-04                                          
+>ZBCG2  IT=     147 f.err= 2.683E-04                                          
+>ZBCG2  IT=     148 f.err= 2.446E-04                                          
+>ZBCG2  IT=     149 f.err= 2.579E-04                                          
+>ZBCG2  IT=     150 f.err= 2.280E-04                                          
+>ZBCG2  IT=     151 f.err= 3.069E-04                                          
+>ZBCG2  IT=     152 f.err= 2.393E-04                                          
+>ZBCG2  IT=     153 f.err= 1.711E-04                                          
+>ZBCG2  IT=     154 f.err= 1.547E-04                                          
+>ZBCG2  IT=     155 f.err= 1.664E-04                                          
+>ZBCG2  IT=     156 f.err= 1.770E-04                                          
+>ZBCG2  IT=     157 f.err= 1.944E-04                                          
+>ZBCG2  IT=     158 f.err= 1.748E-04                                          
+>ZBCG2  IT=     159 f.err= 1.660E-04                                          
+>ZBCG2  IT=     160 f.err= 1.342E-04                                          
+>ZBCG2  IT=     161 f.err= 1.395E-04                                          
+>ZBCG2  IT=     162 f.err= 1.379E-04                                          
+>ZBCG2  IT=     163 f.err= 1.330E-04                                          
+>ZBCG2  IT=     164 f.err= 2.165E-04                                          
+>ZBCG2  IT=     165 f.err= 1.188E-04                                          
+>ZBCG2  IT=     166 f.err= 1.446E-04                                          
+>ZBCG2  IT=     167 f.err= 1.388E-04                                          
+>ZBCG2  IT=     168 f.err= 2.078E-04                                          
+>ZBCG2  IT=     169 f.err= 1.142E-04                                          
+>ZBCG2  IT=     170 f.err= 1.238E-04                                          
+>ZBCG2  IT=     171 f.err= 1.183E-04                                          
+>ZBCG2  IT=     172 f.err= 1.111E-04                                          
+>ZBCG2  IT=     173 f.err= 1.081E-04                                          
+>ZBCG2  IT=     174 f.err= 1.086E-04                                          
+>ZBCG2  IT=     175 f.err= 1.207E-04                                          
+>ZBCG2  IT=     176 f.err= 1.007E-04                                          
+>ZBCG2  IT=     177 f.err= 5.925E-04                                          
+>ZBCG2  IT=     178 f.err= 7.998E-05                                          
+>ZBCG2  IT=     179 f.err= 1.157E-04                                          
+>ZBCG2  IT=     180 f.err= 8.479E-05                                          
+>ZBCG2  IT=     181 f.err= 9.620E-05                                          
+>ZBCG2  IT=     182 f.err= 1.356E-04                                          
+>ZBCG2  IT=     183 f.err= 9.237E-05                                          
+>ZBCG2  IT=     184 f.err= 1.163E-04                                          
+>ZBCG2  IT=     185 f.err= 9.868E-05                                          
+>ZBCG2  IT=     186 f.err= 9.644E-05                                          
+>ZBCG2  IT=     187 f.err= 8.541E-05                                          
+>ZBCG2  IT=     188 f.err= 8.881E-05                                          
+>ZBCG2  IT=     189 f.err= 8.186E-05                                          
+>ZBCG2  IT=     190 f.err= 7.331E-05                                          
+>ZBCG2  IT=     191 f.err= 7.893E-05                                          
+>ZBCG2  IT=     192 f.err= 7.892E-05                                          
+>ZBCG2  IT=     193 f.err= 8.027E-05                                          
+>ZBCG2  IT=     194 f.err= 5.791E-05                                          
+>ZBCG2  IT=     195 f.err= 5.171E-05                                          
+>ZBCG2  IT=     196 f.err= 5.373E-05                                          
+>ZBCG2  IT=     197 f.err= 5.682E-05                                          
+>ZBCG2  IT=     198 f.err= 4.730E-05                                          
+>ZBCG2  IT=     199 f.err= 1.741E-04                                          
+>ZBCG2  IT=     200 f.err= 6.431E-05                                          
+>ZBCG2  IT=     201 f.err= 1.499E-04                                          
+>ZBCG2  IT=     202 f.err= 1.180E-04                                          
+>ZBCG2  IT=     203 f.err= 6.368E-05                                          
+>ZBCG2  IT=     204 f.err= 6.135E-05                                          
+>ZBCG2  IT=     205 f.err= 7.459E-05                                          
+>ZBCG2  IT=     206 f.err= 3.821E-05                                          
+>ZBCG2  IT=     207 f.err= 3.614E-05                                          
+>ZBCG2  IT=     208 f.err= 3.944E-05                                          
+>ZBCG2  IT=     209 f.err= 3.304E-05                                          
+>ZBCG2  IT=     210 f.err= 3.187E-05                                          
+>ZBCG2  IT=     211 f.err= 3.463E-05                                          
+>ZBCG2  IT=     212 f.err= 4.077E-05                                          
+>ZBCG2  IT=     213 f.err= 3.766E-05                                          
+>ZBCG2  IT=     214 f.err= 1.299E-04                                          
+>ZBCG2  IT=     215 f.err= 4.851E-05                                          
+>ZBCG2  IT=     216 f.err= 4.607E-05                                          
+>ZBCG2  IT=     217 f.err= 2.589E-05                                          
+>ZBCG2  IT=     218 f.err= 1.395E-04                                          
+>ZBCG2  IT=     219 f.err= 6.056E-05                                          
+>ZBCG2  IT=     220 f.err= 3.170E-05                                          
+>ZBCG2  IT=     221 f.err= 2.764E-05                                          
+>ZBCG2  IT=     222 f.err= 3.184E-05                                          
+>ZBCG2  IT=     223 f.err= 2.226E-05                                          
+>ZBCG2  IT=     224 f.err= 2.289E-04                                          
+>ZBCG2  IT=     225 f.err= 2.965E-05                                          
+>ZBCG2  IT=     226 f.err= 2.802E-05                                          
+>ZBCG2  IT=     227 f.err= 2.348E-05                                          
+>ZBCG2  IT=     228 f.err= 2.865E-05                                          
+>ZBCG2  IT=     229 f.err= 2.005E-05                                          
+>ZBCG2  IT=     230 f.err= 2.244E-05                                          
+>ZBCG2  IT=     231 f.err= 1.807E-05                                          
+>ZBCG2  IT=     232 f.err= 2.023E-05                                          
+>ZBCG2  IT=     233 f.err= 2.378E-05                                          
+>ZBCG2  IT=     234 f.err= 2.394E-05                                          
+>ZBCG2  IT=     235 f.err= 1.788E-05                                          
+>ZBCG2  IT=     236 f.err= 2.321E-05                                          
+>ZBCG2  IT=     237 f.err= 1.976E-05                                          
+>ZBCG2  IT=     238 f.err= 3.780E-05                                          
+>ZBCG2  IT=     239 f.err= 4.731E-05                                          
+>ZBCG2  IT=     240 f.err= 2.508E-05                                          
+>ZBCG2  IT=     241 f.err= 2.019E-05                                          
+>ZBCG2  IT=     242 f.err= 2.029E-05                                          
+>ZBCG2  IT=     243 f.err= 1.584E-05                                          
+>ZBCG2  IT=     244 f.err= 1.950E-05                                          
+>ZBCG2  IT=     245 f.err= 1.572E-05                                          
+>ZBCG2  IT=     246 f.err= 1.616E-05                                          
+>ZBCG2  IT=     247 f.err= 1.626E-05                                          
+>ZBCG2  IT=     248 f.err= 1.435E-05                                          
+>ZBCG2  IT=     249 f.err= 1.852E-05                                          
+>ZBCG2  IT=     250 f.err= 1.600E-05                                          
+>ZBCG2  IT=     251 f.err= 1.562E-05                                          
+>ZBCG2  IT=     252 f.err= 1.413E-05                                          
+>ZBCG2  IT=     253 f.err= 1.362E-05                                          
+>ZBCG2  IT=     254 f.err= 1.302E-05                                          
+>ZBCG2  IT=     255 f.err= 1.408E-05                                          
+>ZBCG2  IT=     256 f.err= 1.261E-05                                          
+>ZBCG2  IT=     257 f.err= 1.357E-05                                          
+>ZBCG2  IT=     258 f.err= 1.471E-05                                          
+>ZBCG2  IT=     259 f.err= 1.356E-05                                          
+>ZBCG2  IT=     260 f.err= 1.173E-05                                          
+>ZBCG2  IT=     261 f.err= 9.274E-06                                          
+>TIMEIT  Timing results for: PBCGS2                                           
+>TIMEIT     6.095 = CPU time (sec)                                            
+>GETFML Q_abs = 2.2518E-02 Q_ext=  2.2874E-02
+>SCAT      214 scattering directions used to calculate <cos>, etc.          
+>TIMEIT  Timing results for:  SCAT                                            
+>TIMEIT     0.012 = CPU time (sec)                                            
+>DDSCAT return from DDSCAT to calling program
+>DDSCAT use calculated polarization to do nearfield calculations              
+>DDSCAT NUMPROC=   1                                                          
+>DDSCAT --- DDSCAT 7.3.2 [18.08.29]   
+>DDSCAT     VERSNUM=   732
+>DDSCAT     Double-precision version                                          
+>REAPAR  ========== Parameter file for v7.3 ===================               
+>  **** Preliminaries ****                                               
+>REAPAR NOTORQ - do not compute torques                                       
+>REAPAR PBCGS2 - CCG Method                                                   
+>REAPAR GPFAFT - using GPFA package from Clive Temperton                      
+>REAPAR GKDLDR - Gutkowicz-Krusin & Draine (2004) LDR for alpha
+>REAPAR NOTBIN - Unformatted binary dump option                               
+>REAPAR **** Initial Memory Allocation ****                                   
+>REAPAR allow MXNX,MXNY,MXNZ=    60    60    60 for target generation         
+>REAPAR **** Target Geometry and Composition ****                             
+>REAPAR FROM_FILE - Shape definition                                          
+>REAPAR  NCOMP=   1                                                           
+>REAPAR comp  1 : ../auJC.tab                                                 
+>REAPAR **** Additional Nearfield calculation? ****                           
+>REAPAR  2 = NRFLD : calculate nearfield E and B in specified volume          
+>REAPAR  0.000 0.000 0.000 0.000 0.000 0.000                                  
+>REAPAR  fractional extension in -x,+x,-y,+y,-z,+z directions                 
+>REAPAR **** Error Tolerance ****                                             
+>REAPAR  1.000E-05 = TOL = max. acceptable normalized residual |Ax-E|/|E|     
+>REAPAR **** Maximum number of iterations ****                                
+>REAPAR       2370 = MXITER                                                   
+>  **** Integration cutoff parameter for PBC calculations ****           
+>REAPAR [GAMMA is not used in present (non-PBC) calculation]                  
+>  **** Angular resolution for calculation of <cos>, etc. ****           
+>REAPAR  0.5000 = ETASCA (parameter controlling number of scattering angles   
+>  **** Vacuum wavelengths (micron) ****                                 
+>REAPAR   1 wavelengths from  0.6700 to  0.6700                               
+>DIVIDE  Only one element initialized 
+>  **** Refractive index of ambient medium                               
+>REAPAR  1.0000 = NAMBIENT = refractive index of ambient medium               
+>  **** Effective Radii (micron) ****                                    
+>REAPAR   1 eff. radii from  0.0100 to  0.0100                                
+>DIVIDE  Only one element initialized 
+>  **** Define Incident Polarizations ****                               
+>REAPAR IORTH= 1                                                              
+>REAPAR **** Specify which output files to write ****                         
+>REAPAR IWRKSC= 0                                                             
+>  **** Specify Target Rotations ****                                    
+>  **** Specify first IWAV, IRAD, IORI (normally 0 0 0) ****             
+>REAPAR Calculate only for single polarization 
+>REAPAR    0.00   0.00 Range of BETA values ; NBETA =   1                     
+>REAPAR    0.00   0.00 Range of THETA values; NTHETA=   1                     
+>REAPAR    0.00   0.00 Range of PHI values ;   NPHI =   1                     
+>  **** Select Elements of S_ij Matrix to Print ****                     
+>REAPAR CMDFRM=LFRAME : scattering directions given in Lab Frame              
+>REAPAR **** Specify Scattered Directions ****                                
+>DDSCAT Allocate memory for first call to TARGET...                           
+>DDSCAT allocating     0.08 MB for IXYZ0;  total=    40.04 MB                 
+>DDSCAT allocating     0.08 MB for ICOMP;  total=    40.12 MB                 
+>DDSCAT allocating     0.03 MB for IOCC;   total=    40.14 MB                 
+>DDSCAT allocating     0.08 MB for ISCR1;  total=    40.22 MB                 
+>DDSCAT allocating     0.11 MB for BETADF; total=    40.33 MB                 
+>DDSCAT allocating     0.11 MB for PHIDF;  total=    40.43 MB                 
+>DDSCAT allocating     0.11 MB for THETADF;total=    40.54 MB                 
+>DDSCAT allocating     0.11 MB for SCRRS2; total=    40.64 MB                 
+>DDSCAT : dimensions of physical target                                       
+>DDSCAT      1    21 = min, max values of JX                                  
+>DDSCAT      1    21 = min, max values of JY                                  
+>DDSCAT      1    21 = min, max values of JZ                                  
+>DDSCAT  -22.00000 -11.00000 -11.00000 = X0(1-3)                              
+>DDSCAT  --- physical extent of target volume (occupied sites) ---            
+>DDSCAT    -21.50000    -0.50000 = min, max values of x/d                     
+>DDSCAT    -10.50000    10.50000 = min, max values of y/d                     
+>DDSCAT    -10.50000    10.50000 = min, max values of z/d                     
+>EXTEND target extent in x,y,z directions =   21,   21,   21 (in Target Frame)
+>DDSCAT returned from EXTEND:                                                 
+>DDSCAT      1    21 = min, max values of JX                                  
+>DDSCAT      1    21 = min, max values of JY                                  
+>DDSCAT      1    21 = min, max values of JZ                                  
+>DDSCAT  ------- physical extent of target volume -------                     
+>DDSCAT    -21.50000    -0.50000 = min, max values of x/d                     
+>DDSCAT    -10.50000    10.50000 = min, max values of y/d                     
+>DDSCAT    -10.50000    10.50000 = min, max values of z/d                     
+>DDSCAT Allocate memory required for this problem...                          
+>DDSCAT allocating     0.08 MB for ISCR1;  total=    40.04 MB                 
+>DDSCAT allocating     0.11 MB for SCRRS2; total=    40.14 MB                 
+>DDSCAT allocating     0.02 MB for IXYZ0;  total=    40.17 MB                 
+>DDSCAT allocating     0.08 MB for ICOMP;  total=    40.25 MB                 
+>DDSCAT allocating     0.03 MB for IOCC;   total=    40.27 MB                 
+>DDSCAT allocating     0.03 MB for BETADF; total=    40.30 MB                 
+>DDSCAT allocating     0.03 MB for PHIDF;  total=    40.34 MB                 
+>DDSCAT allocating     0.03 MB for THETADF;total=    40.37 MB                 
+>DDSCAT allocating     0.63 MB for CXADIA; total=    41.00 MB                 
+>DDSCAT allocating    10.12 MB for CXZC;   total=    51.13 MB                 
+>DDSCAT allocating     5.06 MB for CXZW;   total=    56.19 MB                 
+>DDSCAT allocating     0.63 MB for CXAOFF; total=    56.82 MB                 
+>DDSCAT allocating     0.63 MB for CXALOF; total=    57.45 MB                 
+>DDSCAT allocating     0.63 MB for CXALPH; total=    58.09 MB                 
+>DDSCAT allocating     0.63 MB for CXE_TF; total=    58.72 MB                 
+>DDSCAT allocating     6.33 MB for CXSC  ; total=    65.05 MB                 
+>DDSCAT allocating     0.63 MB for CXSCR1; total=    65.68 MB                 
+>DDSCAT allocating     0.63 MB for CXXI;   total=    66.31 MB                 
+>DDSCAT allocating     0.32 MB for SCRRS1; total=    66.63 MB                 
+>DDSCAT                 Total memory allocation =    66.63 MB                 
+         13824 = NAT  = number of lattice sites in extended target
+         24  24  24 = x,y,z length of extended target (Targ. Frame)
+>DDSCAT m= (   0.13459 ,   3.79358), epsilon= ( -14.37312 ,    1.02117) :material 1 1
+>DDSCAT    0.010000 = AEFF = effective radius (physical units)
+>DDSCAT    0.100158 = d/aeff for this target
+>DDSCAT    0.670000 = WAVE = wavelength in vacuo (physical units)
+>DDSCAT    0.670000 = wavelength in ambient medium (phys. units)
+>DDSCAT    0.093779 = k_amb*aeff = 2*pi*aeff/lambda_amb
+>DDSCAT    0.009393 = k_amb*d
+>ROTATE       a_1 in TF:  1.00000000  0.00000000  0.00000000                  
+>ROTATE       a_2 in TF:  0.00000000  1.00000000  0.00000000                  
+>ROTATE       a_3 in TF:  0.00000000  0.00000000  1.00000000                  
+>ROTATE      x_LF in TF:  1.00000000  0.00000000  0.00000000                  
+>ROTATE      y_LF in TF:  0.00000000  1.00000000  0.00000000                  
+>ROTATE      z_LF in TF:  0.00000000  0.00000000  1.00000000                  
+>ROTATE n0=x_LF dot a_1=  1.00000000                                          
+>ROTATE n0=x_LF dot a_2=  0.00000000                                          
+>ROTATE n0=x_LF dot a_3=  0.00000000                                          
+>ROTATE    y_LF dot a_1=  0.00000000                                          
+>ROTATE    y_LF dot a_2=  1.00000000                                          
+>ROTATE    y_LF dot a_3=  0.00000000                                          
+>ROTATE    z_LF dot a_1=  0.00000000                                          
+>ROTATE    z_LF dot a_2=  0.00000000                                          
+>ROTATE    z_LF dot a_3=  1.00000000                                          
+>DIRECT_CALC Estimated total cputime required by DIRECT_CALC=    0.00 cpu-sec  
+>DIRECT_CALC cputime is independent of gamma                                   
+>DIRECT_CALC Actual cputime to complete DIRECT_CALC=    0.00 cpu-sec           
+>DIRECT_CALCB Estimated total cputime required by DIRECT_CALCB=    0.03 cpu-sec 
+>DIRECT_CALCB cputime is independent of gamma                                   
+>DIRECT_CALCB Actual cputime to complete DIRECT_CALCB=    0.00 cpu-sec          
+>TIMEIT  Timing results for: NEARFIELD                                        
+>TIMEIT     0.086 = CPU time (sec)                                            
+>DDSCAT return from DDSCAT to calling program
+>DDSCAT normal termination after nearfield calculation                        
+>> In integration.f90: integration is only returned when directional angles of both theta and phi are multiple (length > 1).
+>>> But for the current data set, Ltheta =  1; Lphi =  0.

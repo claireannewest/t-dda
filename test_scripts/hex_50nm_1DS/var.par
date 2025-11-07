@@ -1,0 +1,21 @@
+num_k: 2
+k_out: 0.137
+k_in: 156
+k_in: 42
+k_sub: 0.137
+lambda: 5.32e-07
+n_m: 1.377600
+I_0: 1.0e+8
+unit: 1
+
+d: 1
+x_min: -31
+x_max: 9
+y_min: -49
+y_max: 49
+z_min: -46
+z_max: 46
+
+x_plane: -11
+input_mode: 1
+total_points: 377487

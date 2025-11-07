@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 //Determine whether 'target' is located in 'arr'
 int find_neighbor(int *arr, int N, int target) {
 	int imin = 0, imax = N - 1;
